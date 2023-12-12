@@ -32,6 +32,7 @@ f.close()
 f = open(r"C:\work\demo.txt","rt",encoding="utf-8")
 result = f.read()
 print(result)
+
 #처음으로 돌아가
 f.seek(0)
 print(f.readline(),end="")
