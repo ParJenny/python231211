@@ -8,7 +8,8 @@ from selenium.webdriver.common.by import By
 import clipboard
 import time
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+#원격 웹브라우져 핸들링 
+driver = webdriver.Chrome()
 driver.get('https://nid.naver.com/nidlogin.login')
 
 # 네이버 메인화면에서 로그인 버튼 클릭
@@ -16,12 +17,12 @@ driver.get('https://nid.naver.com/nidlogin.login')
 # time.sleep(1)   # 1초 시간 지연
 
 # 로그인 창에 아이디/비밀번호 입력
-loginID = "kim"
+loginID = "ppwq23"
 clipboard.copy(loginID)
 #mac은 COMMAND, window는 CONTROL
 driver.find_element(By.XPATH,'//*[@id="id"]').send_keys(Keys.CONTROL, 'v')
 
-loginPW = "1234"
+loginPW = "200QKrgus!!"
 clipboard.copy(loginPW)
 driver.find_element(By.XPATH,'//*[@id="pw"]').send_keys(Keys.CONTROL, 'v')
 time.sleep(1)
